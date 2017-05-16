@@ -19,21 +19,17 @@ server.engine('html', ngUniversalEngine({
 // set default view directory
 server.set('views', 'src');
 
-// handle requests for routes in the app.  ngExpressEngine does the rendering.
-server.get(['/', '/dashboard', '/heroes', '/detail/:id'], (req, res) => {
+// handle requests for routes in the app. ngExpressEngine does the rendering.
+server.get(['/'], (req, res) => {
     res.render('index-aot.html', {req});
 });
 
 // handle requests for static files
 server.get(['/*.js', '/*.css'], (req, res, next) => {
-    let fileName: string = req.originalUrl;
+    const fileName: string = req.originalUrl;
     console.log(fileName);
-    let root = fileName.startsWith('/node_modules/') ? '.' : 'src';
-    res.sendFile(fileName, { root: root }, function (err) {
-        if (err) {
-            next(err);
-        }
-    });
+    const root = fileName.startsWith('/node_modules/') ? '.' : 'src';
+    res.sendFile(fileName, { root }, (err) => next(err));
 });
 
 // start the server
