@@ -10,7 +10,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:aot": "webpack --config webpack.config.aot.js",
-    "serve:aot": "lite-server -c=bs-config.aot.js"
+    "serve:aot": "lite-server -c=bs-config.aot.js",
+    "build:uni": "webpack --config webpack.config.uni.js",
+    "serve:uni": "node src/dist/server.js"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +25,7 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "@types/express": "^4.0.35",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
