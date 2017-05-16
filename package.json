@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:aot": "webpack --config webpack.config.aot.js"
+    "build:aot": "webpack --config webpack.config.aot.js",
+    "serve:aot": "lite-server -c=bs-config.aot.js"
   },
   "private": true,
   "dependencies": {
