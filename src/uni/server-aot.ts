@@ -3,10 +3,14 @@ import { enableProdMode } from '@angular/core';
 import { AppServerModuleNgFactory } from '../../aot/src/uni/app.server.ngfactory';
 import * as express from 'express';
 import { ngUniversalEngine } from './universal-engine';
+import * as compression from 'compression';
 
 enableProdMode();
 
 const server = express();
+
+server.use(compression());
+
 // set our angular engine as the handler for html files, so it will be used to render them.
 server.engine('html', ngUniversalEngine({
     bootstrap: [AppServerModuleNgFactory]
