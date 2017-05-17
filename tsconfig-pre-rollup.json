@@ -18,7 +18,7 @@
     ],
     "angularCompilerOptions": {
         "genDir": "aot",
-        "entryModule": "./src/uni/app.server#AppServerModule",
+        "entryModule": "./src/app/app.module#AppModule",
         "skipMetadataEmit" : true
     }
 }
