@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "outDir": "./dist/out-aot",
+        "outDir": "./dist/out-uni",
         "module": "es2015",
         "moduleResolution": "node",
         "sourceMap": true,
