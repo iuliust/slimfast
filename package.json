@@ -12,7 +12,8 @@
     "build:aot": "webpack --config webpack.config.aot.js",
     "serve:aot": "lite-server -c=bs-config.aot.js",
     "build:uni": "webpack --config webpack.config.uni.js",
-    "serve:uni": "node src/dist/server.js"
+    "serve:uni": "node src/dist/server.js",
+    "rollup": "./node_modules/.bin/rollup -c rollup.config.js"
   },
   "private": true,
   "dependencies": {
